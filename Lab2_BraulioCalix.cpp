@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 //miercoles semana 2
 using namespace std;
 int main (){
@@ -62,22 +63,38 @@ int main (){
 				cout << permuta << endl;
 				int tama= permuta.length();
 				cout << tama << endl;	
-				
-				char arre [tama];
-				for (int i=0 ; i< tama ; i++){
-					arre [i] = permuta [i];
-				}
-				for (int i = 0; i < tama ; i++){
-					cout << "[" << arre [i] << "]" ;
-				
-				}
-				cout << "" <<endl;
-				
-				for(){
-					for(){
+				bool repite=false;
+				for(int i = 0; i < tama ; i++){
+					for(int j= 0; j < tama ; j++){
+						if(i==j){
 					
-					}
-				}
+						}else{
+							if ( permuta[i]==permuta[j]){
+								repite=true;
+							}
+						//fin else if 
+						}
+					}//fin for anidado
+				}// fin for 		
+				if(repite == true){
+					cout << "la cadena no es apta para permutar" << endl;
+				}else {
+					cout << "la cadena si es apta para la permutacion " << endl;
+					for(int i = 0; i < tama; i++){
+						cout << permuta[i];
+
+						for(int j =0 ;j < tama; j++){
+//							cout << "i" << i << "j"<< j << endl;
+							
+							if(i==j){
+							
+							}else{
+								cout << permuta[j];
+							}
+						}//fin for anidado
+						cout <<" " <<endl;
+					}//fin for 
+				}			
 				}//ciera llave case
 				break;
 			default :
