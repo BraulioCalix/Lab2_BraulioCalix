@@ -17,7 +17,18 @@ int main (){
 		cin >> opcion;
 		switch (opcion){
 			case 1:
-				cout << "op1" <<endl;
+				cout<< "ingrese que opcion desea ejecutar" << endl;
+				string cadena="";
+				cout "ingrese la cadena "<<endl;
+				cin >> cadena;
+				int arreglo[cadena.length];
+				for(int i=0; i < cadena.length; i++){
+					if(cade){
+					
+					}else{
+					
+					}
+				}
 				break;
 			case 2:
 				cout << "ingrese un numero positivo " << endl;	
