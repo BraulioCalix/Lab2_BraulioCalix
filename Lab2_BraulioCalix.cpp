@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdlib.h>
 #include <string>
 //miercoles semana 2
 using namespace std;
@@ -16,21 +17,41 @@ int main (){
 		bool boolperf = false;
 		cin >> opcion;
 		switch (opcion){
-			case 1:
+			case 1:{
 				cout<< "ingrese que opcion desea ejecutar" << endl;
 				string cadena="";
-				cout "ingrese la cadena "<<endl;
+				cout<< "ingrese la cadena "<<endl;
 				cin >> cadena;
 				int arreglo[cadena.length];
-				for(int i=0; i < cadena.length; i++){
-					if(cade){
-					
-					}else{
-					
+				int tamanocade=0;
+				tamanocade= cadena.length;
+				int suma=0;
+				bool valido= false;
+				for (int i =0;i< tamanocade; i++){
+					if(isdigit(cadena[i])){
+        	        		                
+	                                }else{
+					valido =true;
 					}
 				}
+				if(valido==true){//encontro un caracter que no es un numero
+					cout<<"la cadena contiene caracteres distintos a numeros" << endl; 
+				}else{
+					for(int i=0; i < tamanocade; i++){
+						if(i==tamanocade-1){
+							if(cadena[i]==cadena[1]){}
+								
+							suma+=cadena[i];
+						}else{
+							if(cadena[i]==cadena[i+1]){
+							suma+=cadena[i];		
+							}
+						}
+					}
+				}
+			       }//fin case
 				break;
-			case 2:
+			case 2:{
 				cout << "ingrese un numero positivo " << endl;	
 				cin >> perfecto;
 				if (perfecto < 0){
@@ -66,6 +87,7 @@ int main (){
 						
 					}// fin if de perfecto
 				}
+			       }//fin case
 				break;
 			case 3: {
 				string permuta= "";
