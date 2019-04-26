@@ -10,7 +10,9 @@ int main (){
 		cout << "3) permutaciones " << endl;
 		int opcion=0;
 		int perfecto = 0;
-
+		int acumulaPerfe = 0;
+		int cuentaperfe = 0;
+		bool boolperf = false;
 		cin >> opcion;
 		switch (opcion){
 			case 1:
@@ -23,20 +25,66 @@ int main (){
 				cout << "metio un numero no valido, regresara al menu" <<endl;
 				
 				}else{
-					
-					for (int i=1;i < num;i++){
+					acumulaPerfe = 0;
+					cuentaperfe = 0;
+					for (int i=1;i < perfecto;i++){
+						acumulaPerfe += i;
+						cuentaperfe ++;				
+						if (acumulaPerfe == perfecto){
+							boolperf= true;
+							break;
+						}
+					}
+
+					if(boolperf == true){
+						cout << "el numero si es perfecto" << endl;
+						cout << "EL NUMERO ES: " << perfecto <<endl;
+	
+						for (int i=1;i <= cuentaperfe;i++){
+                	                        	if(i == 1){
+								cout << i;
+							}else{
+								cout << " ," << i ;
+							}
+					 	                       
+                                       		 }//fin for cuenta
+					cout << " " << endl;
+					}else{
+						cout << " el numero no es perfecto "<< endl;
+						
+					}// fin if de perfecto
+				}
+				break;
+			case 3: {
+				string permuta= "";
+				cout << "ingrese la cadena que desea permutar"<< endl;
+				cin >> permuta;
+				cout << permuta << endl;
+				int tama= permuta.length();
+				cout << tama << endl;	
+				
+				char arre [tama];
+				for (int i=0 ; i< tama ; i++){
+					arre [i] = permuta [i];
+				}
+				for (int i = 0; i < tama ; i++){
+					cout << "[" << arre [i] << "]" ;
+				
+				}
+				cout << "" <<endl;
+				
+				for(){
+					for(){
 					
 					}
 				}
-				break;
-			case 3: 
-				cout << "op3" << endl;
+				}//ciera llave case
 				break;
 			default :
 				break;
 			}//fin switch menu
 		cout << "desea regresar? 1)si 2)no" << endl; 
-		cin >>salir;	
+		cin >> salir;	
 	}//fin while respuesta usuario
 return 0;
 }//fin del main
