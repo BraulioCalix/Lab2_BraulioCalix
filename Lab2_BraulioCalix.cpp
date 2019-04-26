@@ -22,12 +22,13 @@ int main (){
 				string cadena="";
 				cout<< "ingrese la cadena "<<endl;
 				cin >> cadena;
-				int arreglo[cadena.length];
-				int tamanocade=0;
-				tamanocade= cadena.length;
-				int suma=0;
-				bool valido= false;
-				for (int i =0;i< tamanocade; i++){
+				int tamano = cadena.length();
+				int arreglo [tamano];
+				int tamanocade = 0;
+				tamanocade = cadena.length();
+				int suma = 0;
+				bool valido = false;
+				for (int i = 0;i< tamanocade; i++){
 					if(isdigit(cadena[i])){
         	        		                
 	                                }else{
@@ -37,18 +38,41 @@ int main (){
 				if(valido==true){//encontro un caracter que no es un numero
 					cout<<"la cadena contiene caracteres distintos a numeros" << endl; 
 				}else{
+					char caracter = ' ';
+					int numero = 0;
+					suma = 0;
 					for(int i=0; i < tamanocade; i++){
+						caracter=' ';
+                                                numero=0;
 						if(i==tamanocade-1){
-							if(cadena[i]==cadena[1]){}
-								
-							suma+=cadena[i];
+							cout << "ultimo" << endl;
+							if(cadena[i]==cadena[0]){
+							caracter = cadena[i];
+							//cout <<"carac : " <<caracter;	
+						       	numero = caracter - 48;	
+							//cout << "numero " <<numero << endl;
+							//cout << "suma antes " << suma << endl;
+							suma+=numero;
+							//cout << "suma despues " << suma << endl;
+							}	
 						}else{
-							if(cadena[i]==cadena[i+1]){
-							suma+=cadena[i];		
+							 //cout <<"carac : " <<caracter;
+							//cout << "primero"<<endl;
+						
+							if(cadena[i]==cadena[i+1]){		
+							caracter = cadena[i];
+                                                        numero = caracter - 48;
+							//cout << "numero " <<numero << endl;
+							//cout << "suma antes " << suma << endl;
+                                                        suma+=numero;
+							//cout << "suma despues " << suma << endl;
+							}else{
+							//	cout << "numero" << cadena[i] << endl;
 							}
 						}
 					}
 				}
+				cout << "la suma es: " << suma << endl; 
 			       }//fin case
 				break;
 			case 2:{
