@@ -48,26 +48,15 @@ int main (){
 							cout << "ultimo" << endl;
 							if(cadena[i]==cadena[0]){
 							caracter = cadena[i];
-						
-						       	numero = caracter - 48;	
-					
-							
+					       		numero = caracter - 48;		
 							suma+=numero;
-							
 							}	
-						}else{
-							
-							
-						
+						}else{						
 							if(cadena[i]==cadena[i+1]){		
 							caracter = cadena[i];
-                                                        numero = caracter - 48;
-							
-							
+                                                        numero = caracter - 48;	
                                                         suma+=numero;
-							
 							}else{
-							
 							}
 						}
 					}
@@ -80,7 +69,6 @@ int main (){
 				cin >> perfecto;
 				if (perfecto < 0){
 				cout << "metio un numero no valido, regresara al menu" <<endl;
-				
 				}else{
 					acumulaPerfe = 0;
 					cuentaperfe = 0;
@@ -96,14 +84,12 @@ int main (){
 					if(boolperf == true){
 						cout << "el numero si es perfecto" << endl;
 						cout << "EL NUMERO ES: " << perfecto <<endl;
-	
 						for (int i=1;i <= cuentaperfe;i++){
                 	                        	if(i == 1){
 								cout << i;
 							}else{
 								cout << " ," << i ;
 							}
-					 	                       
                                        		 }//fin for cuenta
 					cout << " " << endl;
 					}else{
@@ -123,8 +109,7 @@ int main (){
 				bool repite=false;
 				for(int i = 0; i < tama ; i++){
 					for(int j= 0; j < tama ; j++){
-						if(i==j){
-					
+						if(i==j){	
 						}else{
 							if ( permuta[i]==permuta[j]){
 								repite=true;
@@ -140,11 +125,8 @@ int main (){
 					for(int i = 0; i < tama; i++){
 						cout << permuta[i];
 
-						for(int j =0 ;j < tama; j++){
-//							cout << "i" << i << "j"<< j << endl;
-							
+						for(int j =0 ;j < tama; j++){						
 							if(i==j){
-							
 							}else{
 								cout << permuta[j];
 							}
