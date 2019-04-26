@@ -48,26 +48,26 @@ int main (){
 							cout << "ultimo" << endl;
 							if(cadena[i]==cadena[0]){
 							caracter = cadena[i];
-							//cout <<"carac : " <<caracter;	
+						
 						       	numero = caracter - 48;	
-							//cout << "numero " <<numero << endl;
-							//cout << "suma antes " << suma << endl;
+					
+							
 							suma+=numero;
-							//cout << "suma despues " << suma << endl;
+							
 							}	
 						}else{
-							 //cout <<"carac : " <<caracter;
-							//cout << "primero"<<endl;
+							
+							
 						
 							if(cadena[i]==cadena[i+1]){		
 							caracter = cadena[i];
                                                         numero = caracter - 48;
-							//cout << "numero " <<numero << endl;
-							//cout << "suma antes " << suma << endl;
+							
+							
                                                         suma+=numero;
-							//cout << "suma despues " << suma << endl;
+							
 							}else{
-							//	cout << "numero" << cadena[i] << endl;
+							
 							}
 						}
 					}
